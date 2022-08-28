@@ -1,0 +1,52 @@
+Student name: Jason Lu  student id :17985133
+
+Command to Create database:
+
+CREATE TABLE CAB_DATABASE(
+            BOOKINGNUMBER VARCHAR(40) PRIMARY KEY NOT NULL,
+            CNAME VARCHAR(40) NOT NULL,
+            CPHONE VARCHAR(40) NOT NULL,
+            UNUMBER VARCHAR(100),
+            SNUMBER VARCHAR(100) NOT NULL,
+            SNAME VARCHAR(100) NOT NULL,
+            SUB VARCHAR(100),
+            DESSUB VARCHAR(100),
+            PICKDATE VARCHAR(40) NOT NULL,
+            PICKTIME VARCHAR(40) NOT NULL,
+            STATE VARCHAR(40) NOT NULL)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Command to insert database:
+
+INSERT INTO CAB_DATABASE (
+            BOOKINGNUMBER, 
+            CNAME, 
+            CPHONE, 
+            UNUMBER, 
+            SNUMBER, 
+            SNAME,
+            SUB,
+            DESSUB,
+            PICKDATE,
+            PICKTIME,
+            STATE) VALUES 
+            ('$BRN', '$cname', '$phone', '$unumber', '$snumber', '$stname', '$sbname','$dsbname', '$date', '$time', 'Unassigned')
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Command to update date:
+
+UPDATE CAB_DATABASE SET STATE = 'Assigned' WHERE BOOKINGNUMBER = '$AssignBRN'
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Command to Search date with input:
+
+SELECT * FROM CAB_DATABASE WHERE PICKTIME <= '$TwoHourLaterTime' AND PICKTIME >= '$NowTime' AND PICKDATE = '$Todate' AND STATE = 'NOTASSIGN'
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Command to Search data without input (record in 2 hours)
+
+SELECT *FROM CAB_DATABASE WHERE STATE = 'Unassigned' AND CONCAT( PICKDATE, ' ', PICKTIME ) BETWEEN NOW( ) AND NOW( ) + INTERVAL 2 HOUR 

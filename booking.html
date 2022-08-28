@@ -1,0 +1,63 @@
+<!--Jason Lu 17985133-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="booking.js"> </script>
+    <link rel="stylesheet" type="text/css" href="style.css" /> 
+    <title>Cab Booking</title>
+</head>
+<body>
+    <div class="BodyContent" id="BodyContent">
+        <!--navigate to admin page-->
+        <div class="Checkout" id="Checkout">
+            <button class="CheckoutButton" id="CheckoutButton" onClick="window.location.href = 'http://xrf4650.cmslamp14.aut.ac.nz/assign2/admin.html'">Go admin Page</button>
+        </div>
+        <!--Request cab form-->
+        <form id="requestForCab" name="requestForCab">
+            <h1>Cab Booking System</h1>
+            <div id="formcontent">
+                <div id="forname">Customer Name</div>
+                <input type="text" name="cname" required placeholder="enter your name"/>
+            </div>
+            <div id="formcontent">
+                <div id="forname">Phone Number</div>
+            <input type="text" name="phone" required placeholder="enter your phone number"/>
+            </div>
+            <div id="formcontent">
+                <div id="forname">Unit Number</div>
+                <input type="text" name="unumber" placeholder="enter your unit number"/>
+            </div>
+            <div id="formcontent">
+                <div id="forname">Street Number</div>
+                <input type="text" name="snumber" required placeholder="enter your street number"/>
+            </div>
+            <div id="formcontent">
+                <div id="forname">Street Name</div>
+                <input type="text" name="stname" required placeholder="enter your street name"/>
+            </div>
+            <div id="formcontent">
+                <div id="forname">Suburb</div>
+                <input type="text" name="sbname" placeholder="enter your subburb name"/>
+            </div>
+            <div id="formcontent">
+                <div id="forname">Destination Suburb</div>
+                <input type="text" name="dsbname" placeholder="enter the destination suburb"/>
+            </div>
+            <div id="formcontent">
+                <div id="forname">Pick-Up Date</div>
+                <input type="date" name="date" id="date" required />
+            </div>
+            <div id="formcontent">
+                <div id="forname">Pick-up Time</div>
+                <input type="time" name="time" id="time" required />
+            </div>
+            <!--Submit button-->
+            <input name="Button" id="Button" type="button" value="Request for a cab" 
+            onClick="getData('booking.php','reference', cname.value, phone.value, unumber.value, snumber.value, stname.value, sbname.value, dsbname.value, date.value, time.value)"/>
+        </form>
+    <!--Display request information-->
+	<div id="reference" ></div></div>
+</body>
+</html>

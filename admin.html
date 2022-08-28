@@ -1,0 +1,27 @@
+<!--Jason Lu 17985133-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cab admin</title>
+    <link rel="stylesheet" type="text/css" href="style.css" /> 
+    <script type="text/javascript" src="admin.js"> </script>
+</head>
+<body>
+<div class="BodyContent" id="BodyContent">
+    <div class="Checkout" id="Checkout">
+        <!--navigate to booking page-->
+        <button class="CheckoutButton" id="CheckoutButton" onClick="window.location.href = 'http://xrf4650.cmslamp14.aut.ac.nz/assign2/booking.html'">Go Booking Page</button>
+    </div>
+    <!--Search booking request-->
+    <h1>Cab admin System</h1>
+    <form>
+        <input type="text" name="bsearch" class="input" id="input" placeholder="Please enter Booking numebr eg BRN00000" />
+        <input type="button" value="Search" name="sbutton" onClick="SearchRequest('admin.php', 'content', bsearch.value)" class="Button" id="Button"/>
+    </form>
+    <!--Display the booking request detail-->
+    <div id="content"></div>
+</div>
+</body>
+</html>

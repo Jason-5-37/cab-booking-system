@@ -1,0 +1,86 @@
+/* Jason Lu 17985133 */
+
+/*Background picture*/
+body{
+    background:url('background.gif');
+}
+
+#BodyContent{
+    top: 0;
+    left: 0;
+    right: 2;
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 2% 4% 4% 4%;
+    background-color: rgb(206, 237, 245);
+    border-radius: 15px;
+    opacity:0.8;
+    box-shadow: 12px 12px 2px 1px rgba(192, 109, 31, 0.2);
+}
+
+/*Navigate button */
+#Checkout{
+    float:right;
+}
+
+/*Navigate button */
+#CheckoutButton{
+    background-color:aqua;
+}
+
+/*Search button*/
+#Button{
+    width: 220px;
+    height: 35px;
+    line-height: 30px;
+    color: black;
+    background: #A0A0A0;
+    border-radius: 5px;
+    margin: 10px auto;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 20px;
+}
+
+/*Search input */
+#input{
+    width: 500px;
+    height: 35px;
+    line-height: 30px;
+    color: #fff;
+    background: #A0A0A0;
+    border-radius: 5px;
+    margin: 10px auto;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 20px;
+    cursor:pointer;
+}
+
+/*Form content */
+#formcontent{
+    display: flex;
+}
+
+#forname{
+    width: 200px;
+}
+
+/*Booking form */
+#requestForCab{
+    width:400px;
+    margin:auto;
+}
+
+/*Search table */
+table, td, td
+{
+    border:1px solid rgb(197, 193, 255);
+}
+
+td
+{
+    background-color:rgb(206, 237, 245);
+    color:rgb(55, 0, 255);
+}
